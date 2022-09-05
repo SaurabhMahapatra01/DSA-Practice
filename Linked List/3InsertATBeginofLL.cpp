@@ -2,8 +2,8 @@
 using namespace std;
  struct Node
  {
- 	int data;
- 	Node *next;
+ 	int data; //DATA part of Node
+	Node *next;  //Next Part of Node that store address
  	Node(int x)
  	{
  		data = x;
