@@ -12,11 +12,40 @@ using namespace std;
    		next = NULL;
    	}
  };
+
+
+ Node *TakeInput(){
+  int data;
+  cin>>data;
+  Node *head = NULL;  // It takes  initially Null Value
+  while(data != -1)
+  {
+    Node *newNode = new Node(data);
+    // Node n(data);
+    if(head==NULL){
+      head = newNode;
+       // head = &n; // Address of First Node
+    }
+    else{
+      // head -> next = newNode
+      Node *temp = head;
+      while(temp ->next != NULL){
+        temp = temp ->next;
+
+      }
+      temp ->next = newNode;
+
+    }
+    cin>>data;
+  }
+ }
+
+ //For print the data
  void print(Node *head)
  {
- 	Node *temp = head;
+ 	// Node *temp = head;
    while(head != NULL){
-   	cout<<head -> data<<" ";
+   	cout<<"==>"<<head -> data<<" ";
    	head = head -> next;
    }
    //  while(head != NULL){
@@ -26,21 +55,24 @@ using namespace std;
  }
 int main()
 {
+  Node *head = TakeInput();
+  print(head);
+  cout<<head<<" ";
 	//Statically
-	Node n1(1);
-    Node *head = &n1;
+	// Node n1(1);
+ //    Node *head = &n1;
 
-	Node n2(2);
-	Node n3(3);
-	Node n4(4);
-	Node n5(5);
+	// Node n2(2);
+	// Node n3(3);
+	// Node n4(4);
+	// Node n5(5);
 
-    n1.next=&n2;
-    n2.next=&n3;
-    n3.next=&n4;
-    n4.next=&n5;
+ //    n1.next=&n2;
+ //    n2.next=&n3;
+ //    n3.next=&n4;
+ //    n4.next=&n5;
 
-    print(head);
+ //    print(head);
 
 
      
