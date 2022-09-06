@@ -15,10 +15,10 @@ struct Node
  	Node *Current = head;
  	while(Current !=NULL)
  	{
- 		cout<<Current->data<<" ";
+ 		cout<<Current->data<<"==> "<<" ";
  		Current = Current -> next;
  	}
-
+ 
 // RECURSION 
  	// if ( head == NULL){
  	// 	return;
@@ -29,6 +29,7 @@ struct Node
 
  Node *takeInput()
  {
+ 	//Time Complexity  = O(n)
  	//Declare the Varibale
  	int data;
  	cin>>data;
