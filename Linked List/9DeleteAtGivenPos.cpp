@@ -36,17 +36,39 @@ Node *Take_Input()
 	return head;
 }
 
-Node *Deletion(Node * head, int value)
-{
-	Node *temp = head;
-	while(temp->next->data != value)
-	{
-		temp == temp->next;
-	}
-	Node *todelete=temp->next;
-	temp->next=temp->next->next;
+// Node *Deletion(Node * head, int value)
+// {
+// 	Node *temp = head;
+// 	while(temp->next->data != value)
+// 	{
+// 		temp == temp->next;
+// 	}
+// 	Node *todelete=temp->next;
+// 	temp->next=temp->next->next;
 
-	delete todelete;
+// 	delete todelete;
+// }
+
+Node *deleteNode(Node *head, int position)
+{
+	if(head == NULL){
+		return head;
+	}
+	if(position == 0){
+		return head->next;
+	}
+	int count =0;
+	Node *Current = head;
+	while(Current != NULL && count < (position -1)){
+		Current = Current->next;
+		count++;
+	}
+	if(Current == NULL || Current->next ==NULL)
+	{
+		return head;
+	}
+	Current->next = Current->next->next;
+	return head;
 }
 
 void print(Node *head)
@@ -65,7 +87,7 @@ int main()
 	print(head);
     int value;
     cin>>value;
-   head = Deletion(head, value);
+   head = deleteNode(head, value);
     print(head);
     
 	return 0;
