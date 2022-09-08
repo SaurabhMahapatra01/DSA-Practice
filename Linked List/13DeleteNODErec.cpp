@@ -53,7 +53,7 @@ Node *deleteNodeREC(Node *head, int pos)
 	if(pos==0){
 		return head->next;
 	}
-	Node *SmallHead = deleteNodeREC(head->next, pos -1);
+	Node *SmallHead = deleteNodeREC(head -> next, pos -1);
 	head->next = SmallHead;
 	return head;
 }
