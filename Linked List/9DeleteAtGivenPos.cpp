@@ -54,10 +54,10 @@ Node *deleteNode(Node *head, int position)
 	if(head == NULL){
 		return head;
 	}
-	if(position == 0){
+	if(position == 1){
 		return head->next;
 	}
-	int count =0;
+	int count =1;
 	Node *Current = head;
 	while(Current != NULL && count < (position -1)){
 		Current = Current->next;
@@ -83,11 +83,17 @@ void print(Node *head)
 }
 int main()
 {
-	Node *head = Take_Input();
-	print(head);
+	int n;
+	cin>>n;
+	for(int i =0;i<n-1;i++)
+	{
+		Node *head = Take_Input();
+			print(head);
+
+	}
     int value;
     cin>>value;
-   head = deleteNode(head, value);
+   Node *head = deleteNode(head, value);
     print(head);
     
 	return 0;
