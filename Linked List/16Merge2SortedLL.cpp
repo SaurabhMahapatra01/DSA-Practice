@@ -1,3 +1,9 @@
+// Complexities :
+// time Complexity = O(N + M)
+// space complexity = O(1)
+// N & M are the size of first and second singly linked list respectively
+
+
 #include<bits/stdc++.h>
 using namespace std;
 struct Node
