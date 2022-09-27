@@ -1,3 +1,7 @@
+// COMPLEXITY
+//Time Complexity = O(n)
+// Space Complexity = O(1)
+
 #include<bits/stdc++.h>
 using namespace std;
 struct Node
@@ -48,27 +52,40 @@ void print(Node *head)
 	cout<<"NULL"<<endl;
 }
 
-Node *MidNode(Node *head)
+// Node *MidNode(Node *head)
+// {
+// 	if(head == NULL || head ->next == NULL){
+// 		return head;
+// 	}
+// 	Node *start = head;
+// 	Node *end = head ->next;
+// 	 while(end != NULL && end->next != NULL)
+// 	 {
+// 	 	start = start -> next;
+// 	 	end = end ->next ->next;
+// 	 }
+// 	 return start;
+// }
+
+Node *MidNode(Node * head)
 {
-	if(head == NULL || head ->next == NULL){
-		return head;
-	}
 	Node *start = head;
-	Node *end = head ->next;
-	 while(end != NULL && end->next != NULL)
-	 {
-	 	start = start -> next;
-	 	end = end ->next ->next;
-	 }
-	 return start;
+	Node *end = head;
+	while(end != NULL && end->next != NULL)
+	{
+		start = start->next;
+		end = end->next->next;
+	}
+	return start;
 }
 int main()
 {
 	
   Node *head = Take_Input();
   print(head);
-  head = MidNode(head);
-  print(head);
+  Node *mid = MidNode(head);
+
+  
 
 	return 0;
 }
