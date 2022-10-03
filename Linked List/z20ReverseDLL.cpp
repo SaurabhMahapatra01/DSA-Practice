@@ -25,7 +25,7 @@ Node *takeInput()
 
     while(data != -1)
     {
-    	Node *newnode = new Node(data); // Create teh new Node
+    	Node *newnode = new Node(data); // Create the new Node
 
     	if(head == NULL){
     		
@@ -73,17 +73,19 @@ Node *ReverseDLL(Node *head)
 int main()
 {
 	// Node *head = takeInput();
-	Node *head =  new Node(100);
-  Node *temp1 = new Node(101);	
-  Node *temp2 = new Node(102);	
+	
+    Node *head =  new Node(55);
+  Node *temp1 = new Node(110);	
+  Node *temp2 = new Node(220);	
   head ->next = temp1;
   temp1 ->prev = head;
   temp1 ->next = temp2;
   temp2 ->prev = temp1;
+  print(head);
 
+   head = ReverseDLL(head);
 	print(head);
+	
 
-    head = ReverseDLL(head);
-	print(head);
 	return 0;
 }
