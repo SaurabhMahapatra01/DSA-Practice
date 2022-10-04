@@ -1,4 +1,6 @@
-// Time Complexity = O👎
+// Time Complexity = O(n)
+// Space Complexity = O(1)
+
 
 
 #include<bits/stdc++.h>
