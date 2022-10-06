@@ -15,7 +15,7 @@ int main()
   while(s.empty() == false){
   	cout<<s.top()<<endl;
   	s.pop();
-  	cout<<s.size()<<endl;
+  	// cout<<s.size()<<endl;
 
   }
 	return 0;
