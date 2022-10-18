@@ -15,7 +15,7 @@ struct Node
  	Node *Current = head;
  	while(Current !=NULL)
  	{
- 		cout<<Current->data<<"==> "<<" ";
+ 		cout<<Current->data<<"==>";
  		Current = Current -> next;
  	}
  
