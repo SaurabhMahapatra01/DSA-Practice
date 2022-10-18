@@ -15,7 +15,7 @@ Node *InsertBegin(Node *head, int x)
 {
 	Node *temp = new Node(x);
 	temp ->next = head;
-	return temp;
+	head = temp;
 }
 
 void Print(Node * head)
